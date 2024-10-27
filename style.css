@@ -1,0 +1,134 @@
+/* Estilos globales */
+body {
+  background-color: #2b2b2b; /* Color oscuro para el fondo */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0; /* Texto claro para contraste */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título principal */
+h1 {
+  color: #ff7849; /* Un tono más oscuro de naranja */
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombra de texto para más profundidad */
+}
+
+/* Tarjetas de productos */
+.card {
+  background-color: #333333; /* Fondo más oscuro para las tarjetas */
+  border: 1px solid #444; /* Sutil borde oscuro */
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Más sombra para un efecto flotante */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Efecto de hover más pronunciado */
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #d1d1d1; /* Texto claro para contraste */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #a8a8a8; /* Texto gris suave */
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 200px; /* Altura fija del cuadro */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el cuadro sin distorsionar */
+  filter: brightness(0.85);
+  display: block; /* Asegura que se comporte como un bloque */
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: #ff7849; /* Naranja oscuro */
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 120, 73, 0.4); /* Sombra suave en el botón */
+}
+
+.btn-primary:hover {
+  background-color: #e66a39; /* Un tono más oscuro al pasar el ratón */
+  box-shadow: 0 6px 20px rgba(255, 120, 73, 0.5); /* Más sombra en hover */
+}
+
+/* Estilo del encabezado del modal */
+.modal-header {
+  background-color: #ff7849; /* Color del encabezado del modal */
+  border-bottom: 2px solid #e0e0e0; /* Borde suave */
+}
+
+/* Estilo del cuerpo del modal */
+.modal-body {
+  background-color: #2f2f2f; /* Fondo oscuro para el cuerpo del modal */
+}
+
+/* Estilo de los inputs del formulario */
+input {
+  border-radius: 10px;
+  border: 1px solid #555; /* Borde más oscuro */
+  padding: 12px; /* Aumentar el padding para mejor aspecto */
+  width: calc(100% - 24px); /* Ajuste para eliminar el margen */
+  margin-bottom: 15px;
+  font-size: 1rem;
+  background-color: #3a3a3a; /* Fondo oscuro */
+  color: #e0e0e0; /* Texto claro */
+}
+
+/* Efecto en inputs al hacer focus */
+input:focus {
+  outline: none;
+  border-color: #ff7849; /* Color al hacer focus */
+  box-shadow: 0 0 8px rgba(255, 120, 73, 0.6);
+  transition: border-color 0.2s ease;
+}
+
+/* Estilo para los botones */
+.btn {
+  border-radius: 25px; /* Bordes redondeados */
+  padding: 10px 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ff7849; /* Manteniendo el color ya establecido */
+}
+
+.btn-primary:hover {
+  background-color: #e66a39; /* Tono más oscuro al pasar el ratón */
+}
+
+/* Estilos responsivos para el modal */
+@media (max-width: 768px) {
+  .modal-dialog {
+    width: 100%; /* Ancho completo en móviles */
+    margin: 0; /* Sin margen */
+  }
+}
+

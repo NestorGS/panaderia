@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panadería La Desesperanza</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mt-5">Panadería La Desesperanza</h1>
+
+    <!-- Galería de productos -->
+    <div class="row" id="productList">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="descarga.jpg" class="card-img-top" alt="Pan de Día de Muertos">
+          <div class="card-body">
+            <h5 class="card-title">Pan de Día de Muertos</h5>
+            <p class="card-text">Delicioso pan para las festividades.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Otro producto -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="pn.jpg" class="card-img-top" alt="Pan tradicional">
+          <div class="card-body">
+            <h5 class="card-title">Pan de Halloween</h5>
+            <p class="card-text">Pan tradicional mexicano.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón para abrir el modal de nuevo producto -->
+    <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#modalProducto">
+      Agregar Nuevo Producto o ocultar
+    </button>
+<!-- Botón para borrar productos agregados -->
+<button id="borrar-productos" class="btn btn-danger mt-3">Borrar Productos Agregados</button>
+
+<!-- Galería de productos -->
+<div class="row">
+  <!-- Los productos se agregarán aquí dinámicamente -->
+</div>
+
+<!-- Modal para agregar nuevo producto -->
+<div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- Modal más ancho -->
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalProductoLabel">Agregar Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-producto">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre del Producto</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ej. Pan de Día de Muertos" required>
+          </div>
+          <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" id="precio" placeholder="Ej. 50" required>
+          </div>
+          <div class="mb-3">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input type="number" class="form-control" id="cantidad" placeholder="Ej. 10" required>
+          </div>
+          <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen del Producto</label>
+            <input type="file" class="form-control" id="imagen" accept="image/*" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar Producto</button> <!-- Botón con color ya establecido -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Enlace a Bootstrap y tu JavaScript personalizado -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
